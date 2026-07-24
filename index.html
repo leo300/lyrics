@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Lyrics Finder</title>
+
+    <meta name="description"
+          content="Beautiful Lyrics Search powered by LRCLIB">
+
+    <meta name="theme-color"
+          content="#5b6cff">
+
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent">
+
+    <link rel="manifest"
+          href="manifest.json">
+
+    <link rel="apple-touch-icon"
+          href="icons/icon-192.png">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="animated-bg">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<header class="header glass">
+
+    <div class="logo">
+
+        🎵 Lyrics Finder
+
+    </div>
+
+    <button
+            id="themeToggle"
+            class="theme-btn ripple">
+
+        🌙
+
+    </button>
+
+</header>
+
+<section class="hero">
+
+    <h1>
+
+        Search Song Lyrics
+
+    </h1>
+
+    <p>
+
+        Powered by LRCLIB
+
+    </p>
+
+</section>
+
+<section class="search-container">
+
+    <div class="search-box glass">
+
+        <input
+               id="artistInput"
+               autocomplete="off"
+               placeholder="Search artist...">
+
+        <button
+                id="searchBtn"
+                class="ripple">
+
+            Search
+
+        </button>
+
+    </div>
+
+</section>
+
+<section id="statusArea">
+
+</section>
+
+<section id="songsContainer">
+
+</section>
+
+<template id="songTemplate">
+
+<div class="song-card glass">
+
+    <div class="song-header">
+
+        <div>
+
+            <h2 class="song-title">
+
+            </h2>
+
+            <p class="song-album">
+
+            </p>
+
+        </div>
+
+        <div class="song-right">
+
+            <span class="badge">
+
+            </span>
+
+            <span class="arrow">
+
+                ▼
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="lyrics-wrapper">
+
+        <div class="song-info">
+
+            <div>
+
+                <strong>Artist</strong>
+
+                <span class="artist"></span>
+
+            </div>
+
+            <div>
+
+                <strong>Album</strong>
+
+                <span class="album"></span>
+
+            </div>
+
+            <div>
+
+                <strong>Duration</strong>
+
+                <span class="duration"></span>
+
+            </div>
+
+        </div>
+
+        <div class="lyrics-actions">
+
+            <button class="copy ripple">
+
+                Copy
+
+            </button>
+
+            <button class="download ripple">
+
+                Download
+
+            </button>
+
+        </div>
+
+        <pre class="lyrics">
+
+Loading...
+
+</pre>
+
+    </div>
+
+</div>
+
+</template>
+
+<div
+     id="backToTop"
+     class="back-top ripple">
+
+↑
+
+</div>
+
+<footer>
+
+    Made with ❤️ using
+
+    <a href="https://lrclib.net/docs"
+       target="_blank">
+
+        LRCLIB
+
+    </a>
+
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+
+window.addEventListener('load',()=>{
+
+navigator.serviceWorker.register('service-worker.js');
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
