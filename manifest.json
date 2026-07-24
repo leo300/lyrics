@@ -1,0 +1,41 @@
+{
+  "name": "Lyrics Finder - LRCLIB",
+  "short_name": "Lyrics",
+  "description": "Search artists and view song lyrics instantly using LRCLIB.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09090b",
+  "theme_color": "#6366f1",
+
+  "categories": [
+    "music",
+    "entertainment"
+  ],
+
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "screenshots": [],
+
+  "shortcuts": [
+    {
+      "name": "Search Lyrics",
+      "short_name": "Search",
+      "url": "./"
+    }
+  ]
+}
